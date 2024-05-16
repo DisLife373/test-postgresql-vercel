@@ -1,11 +1,8 @@
-const pool  = require("../../server");
 const Pool = require ("pg").Pool;
-
-    
 
 const getAccount =async (req,res) => {
 
-    pool.query("SELECT * FROM Account", (error, results) => {
+    Pool.query("SELECT * FROM Account", (error, results) => {
         if (error) {
             console.error('Error executing query:', error);
             res.status(500).json({ error: 'Internal server error' });
@@ -17,7 +14,7 @@ const getAccount =async (req,res) => {
 
 const getRooms =async (req,res) => {
 
-    pool.query("SELECT * FROM Room", (error, results) => {
+    Pool.query("SELECT * FROM Room", (error, results) => {
         if (error) {
             console.error('Error executing query:', error);
             res.status(500).json({ error: 'Internal server error' });
@@ -29,7 +26,7 @@ const getRooms =async (req,res) => {
 
 const getJobs =async (req,res) => {
 
-    pool.query("SELECT * FROM Job", (error, results) => {
+    Pool.query("SELECT * FROM Job", (error, results) => {
         if (error) {
             console.error('Error executing query:', error);
             res.status(500).json({ error: 'Internal server error' });
@@ -41,7 +38,7 @@ const getJobs =async (req,res) => {
 
 const getAddresses =async (req,res) => {
 
-    pool.query("SELECT * FROM Address", (error, results) => {
+    Pool.query("SELECT * FROM Address", (error, results) => {
         if (error) {
             console.error('Error executing query:', error);
             res.status(500).json({ error: 'Internal server error' });
@@ -53,7 +50,7 @@ const getAddresses =async (req,res) => {
 
 const getRatings =async (req,res) => {
 
-    pool.query("SELECT * FROM Rating", (error, results) => {
+    Pool.query("SELECT * FROM Rating", (error, results) => {
         if (error) {
             console.error('Error executing query:', error);
             res.status(500).json({ error: 'Internal server error' });
@@ -65,7 +62,7 @@ const getRatings =async (req,res) => {
 
 const getReviews =async (req,res) => {
 
-    pool.query("SELECT * FROM Reviews", (error, results) => {
+    Pool.query("SELECT * FROM Reviews", (error, results) => {
         if (error) {
             console.error('Error executing query:', error);
             res.status(500).json({ error: 'Internal server error' });
@@ -77,7 +74,7 @@ const getReviews =async (req,res) => {
 
 const getInvoices =async (req,res) => {
 
-    pool.query("SELECT * FROM Invoice", (error, results) => {
+    Pool.query("SELECT * FROM Invoice", (error, results) => {
         if (error) {
             console.error('Error executing query:', error);
             res.status(500).json({ error: 'Internal server error' });
@@ -89,7 +86,7 @@ const getInvoices =async (req,res) => {
 
 const getMaidJobs =async (req,res) => {
 
-    pool.query("SELECT * FROM MaidJob", (error, results) => {
+    Pool.query("SELECT * FROM MaidJob", (error, results) => {
         if (error) {
             console.error('Error executing query:', error);
             res.status(500).json({ error: 'Internal server error' });
@@ -101,7 +98,7 @@ const getMaidJobs =async (req,res) => {
 
 const getInvoiceJobs =async (req,res) => {
 
-    pool.query("SELECT * FROM InvoiceJob", (error, results) => {
+    Pool.query("SELECT * FROM InvoiceJob", (error, results) => {
         if (error) {
             console.error('Error executing query:', error);
             res.status(500).json({ error: 'Internal server error' });
